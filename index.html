@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Homepage</title>
+	<noscript>
+		<h1>Please enable JavaScript</h1>
+		<style>
+		body{
+			background:black;
+		}
+
+		h1{
+			font-size: 100px;
+			text-align:center;
+			color:white;
+			font-family:sans-serif;
+		}
+
+		#webpage{display:none;}
+		</style>
+	</noscript>
+
+</head>
+<body>
+<div id="webpage">
+	<div id="site-intro">
+		<center>
+		<img src="images/logo.png" alt="logo" width="120"/>
+		<h1 id="app-name">SAFE_DOC</h1>
+		<i class="fa fa-play-circle-o animated infinite swing" style="font-size:50px;margin-top:20px;cursor:pointer" onclick="sidebar()"></i>
+		</center>
+	</div>
+	<div id="side-bar" style="overflow-y: scroll;">
+		<i class="fa fa-close" style="float:right;color:white;background-color:black;padding:5px;cursor:pointer" onclick="sidebar_close()"></i>
+		<h1 align="center" style="color:white">Login User !</h1>
+		<form id="login-form" onsubmit="return login()">
+			<input type="email" name="username" placeholder="&#xf2bd; username" id="login-user">
+			<br>
+			<input type="password" name="password" placeholder="&#xf023; Password" id="login-password">
+			<br>
+			<input type="submit" value="Login">
+		</form>
+		<br><br><br><br>
+
+
+		<h1 align="center" style="color:white">Signup User !</h1>
+		<form id="sign-form" autocomplete="off" onsubmit="return signup()">
+			<input type="text" name="name" placeholder="&#xf2bd; Your name" id="name" required>			
+			<br>
+			<input type="email" name="email" placeholder="&#xf0e0; Email id" id="email" onchange="user_existed()" required class="animated">
+			<span id="user_found" style="display:block;margin-top:-10px;color:white;font-family:sans-serif;font-weight:bold"></span>
+			<br>
+			<input type="password" name="password" placeholder="&#xf023; Password" id="password" required>
+			<br>
+			<input type="text" name="mobile" placeholder="&#xf10b; Mobile no" id="mobile" required>
+			<br>
+			<span id="signup_success" style="font-family:sans-serif;color:white;font-weight:bold;"></span>
+			<input type="submit" value="Sign Up"  id="signup_submit">
+		</form>
+	</div>
+</div>
+<script src="script/compatible.js"></script>
+<script src="script/script.js"></script>
+<script src="script/signup_login.js"></script>
+</body>
+</html>

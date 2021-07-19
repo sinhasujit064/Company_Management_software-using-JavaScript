@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style/accounts_only.css">
+	<link rel="stylesheet" href="style/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Homepage</title>
+	<noscript>
+		<h1>Please enable JavaScript</h1>
+		<style>
+		body{
+			background:black;
+		}
+
+		h1{
+			font-size: 100px;
+			text-align:center;
+			color:white;
+			font-family:sans-serif;
+		}
+
+		#webpage{display:none;}
+		</style>
+	</noscript>
+
+</head>
+<body>
+	<div id="webpage">
+			<header>
+				<img src="../../../images/triangle.png" width="130">
+				<div id="pic-box"></div>
+			</header>
+
+			<h1 align="center" id="app-name">Business Management System</h1>
+			<p id="tag-line">Manage your all business details like ledger, voucher, tax, balance sheet and many more</p>
+
+			<div id="app-design">
+				<div id="brand"></div>
+				<div id="brand-name">
+					
+				</div>
+				
+				<div id="option-box">
+
+
+					<button id="unit-of-measure">
+						<div id="primary-content">
+						<i class="fa fa-balance-scale" style="font-size:25px;float:left"></i> &nbspUnit of measure
+						</div>
+
+						<div id="secondary-content">
+							<form id="unit-form">
+
+								<i class="fa fa-close" style="float:right" id="close-icon"></i>
+								<input type="text" placeholder="Symbol" required="required">
+								<input type="text" placeholder="Formal name" required="required">
+								<input type="submit" value="Set">
+
+							</form>
+
+						</div>
+					</button>
+
+
+<button id="tax-btn"><i class="fa fa-calculator" style="font-size:25px;float:left">
+	
+
+</i> &nbsp<span id="tax-link">Tax setup</span><br><br><br>
+	<form id="tax-form">
+		<input type="text" name="tax-name" id="tax-name" placeholder="Tax name" required="required"><br>
+		<input type="text" name="tax" id="tax" placeholder="2%" required="required"><br>
+		<input type="submit" value="Done" id="tax-submit">
+	</form>
+</button>
+
+					<button id="sales-btn"><i class="fa fa-money" style="font-size:25px;float:left"></i> &nbspSales voucher</button>
+					<button><i class="fa fa-window-close" style="font-size:25px;float:left"></i> &nbspShut company</button>
+
+				</div>
+			</div>
+
+
+
+	</div>
+	<!-- start sales voucher -->
+		<div id="sales-voucher"  style="font-family:Ubuntu">
+			<table width="100%">
+				<tr>
+					<td><button id="voucher-close" style="padding:8px;background:white;font-weight:bold;border:1px solid #d4d4d4;margin-bottom:5px;font-size:15px;box-shadow:0px 0px 3px #ddd;float:right"><i class="fa fa-close"></i> close invoice</button></td>
+				</tr>
+			</table>
+			<table width="100%" style="margin-bottom:1px;background:black;color:white">
+				<tr>
+					<td bgcolor="black" width="150" style="color:white">Sales voucher : 123</td>
+					<td align="right" id="date">Date : </td>
+					
+				
+					
+				</tr>
+			</table>
+
+			<table width="100%" border="1">
+				<tr>
+					<td id="voucher-details"></td>
+					<td id="voucher-logo" width="130"></td>
+				</tr>
+			</table>
+			<form">
+				<br>
+			Name<br>
+			<input type="text" name="name" id="name" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Email<br>
+			<input type="email" name="email" id="email" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Address<br>
+			<input type="text" name="address" id="address" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Phone<br>
+			<input type="number" name="phone" id="phone" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			</form>
+			<br>
+			<br>
+			<table id="product-table">
+			<tr>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Qty</td>
+			<td>Amount</td>
+			<td>Del</td>
+			</tr>
+			</table>
+
+			<br>
+
+			<button  id="add-product" style="padding:8px;background:white;border:1px solid #323232;font-size:15px;font-weight:bold;cursor:pointer">
+			<i class="fa fa-plus-square" style=""></i>
+			Add item
+			</button>
+			<br>
+			<table width="100%" style="border:1px solid black;margin-top:20px;">
+			<tr>
+			<td width="70%"></td>
+			<td>Subtotal</td>
+			<td id="subtotal"><i class="fa fa-rupee"></i> 0.00</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td id="tax-col" style="line-height:35px"></td>
+			<td id="tax-calculation" style="line-height:35px"></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td>Total</td>
+			<td><i class="fa fa-rupee"></i> 0.00</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td><b>Balance Due</b></td>
+			<td><b><i class="fa fa-rupee"></i> 0.00</b></td>
+			</tr>
+			</table>
+		</div>
+
+	<!-- end sales voucher -->
+	<script src="script/accounts_only.js"></script>
+</body>
+</html>
